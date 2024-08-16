@@ -2,6 +2,8 @@
 
 PSQL="psql --username=freecodecamp --dbname=periodic_table -t -c"
 
+mx_sb_len=2
+
 print_info(){
   read an bar nm bar sb bar tp bar am bar mp bar bp <<< $($PSQL "
     select atomic_number,
@@ -34,7 +36,7 @@ else
     # arg is atomic number
     print_info "atomic_number = $1"
   else
-    if [[ $(echo -n $1 | wc -m) -gt 2  ]]
+    if [[ $(echo -n $1 | wc -m) -gt $mx_sb_len  ]]
     then
       #arg is name
        print_info "name = '$1'"

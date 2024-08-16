@@ -29,7 +29,7 @@ print_info(){
 
 if [[ -z $1 ]]
 then
-  echo -e "Please provide an element as an argument."
+  echo "Please provide an element as an argument."
 else
   if [[ $1 -gt 0 ]]
   then

@@ -33,15 +33,12 @@ then
 else
   if [[ $1 -gt 0 ]]
   then
-    # arg is atomic number
     print_info "atomic_number = $1"
   else
     if [[ $(echo -n $1 | wc -m) -gt $mx_sb_len  ]]
     then
-      #arg is name
        print_info "name = '$1'"
     else 
-      #arg is symbol
        print_info "symbol = '$1'"
     fi
   fi
